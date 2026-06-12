@@ -11,7 +11,7 @@
 # - Useful for repeating actions until a goal is reached
 # - Reeborg's World helped visualise loops in action
 
-# Example of what I practiced (adapt to your actual solution):
+# Example of what I practiced:
 
 # def turn_right():
 #     turn_left()
@@ -35,7 +35,3 @@
 #     else:
 #         move()
 
-# Key takeaway:
-# while loops are perfect when you don't know exactly 
-# how many times something needs to repeat - 
-# the loop keeps going until the condition becomes False
