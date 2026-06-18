@@ -10,3 +10,16 @@
   to wire together next session
 - Still pending: reduce lives on wrong guess, show correct 
   stage art, handle "You lose" condition
+
+
+
+  ## Day 13 — June 18, 2026
+- Topic: Hangman game - completed (lives, break, ASCII stages)
+- Wired up lives to decrease on wrong guesses and trigger 
+  "You lost" / "You won" correctly
+- Learned and implemented two approaches to stopping a while 
+  loop early: combined condition vs break statement
+- Used lives as a dynamic list index to display the correct 
+  hangman stage automatically
+- Fixed SyntaxWarnings from unescaped backslashes in ASCII art
+- Hangman game challenge fully complete 🎉
