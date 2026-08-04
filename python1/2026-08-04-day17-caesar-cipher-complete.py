@@ -15,37 +15,37 @@
 # - Used .lower() on play_again input to handle uppercase YES
 # - print("Goodbye!") runs when user types 'no' ending the game
 
-# alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m',
-#             'n','o','p','q','r','s','t','u','v','w','x','y','z']
+alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m',
+            'n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 # from art import logo
 # print(logo)
 
-# def caesar(plain_text, shift_amount, direction):
-#     cipher_text = []
-#     shift_amount %= 26
-#     for letter in plain_text:
-#         if letter in alphabet:
-#             if direction == "encode":
-#                 shifted_position = (alphabet.index(letter) + shift_amount) % 26
-#                 cipher_text.append(alphabet[shifted_position])
-#             elif direction == "decode":
-#                 shifted_position = (alphabet.index(letter) - shift_amount) % 26
-#                 cipher_text.append(alphabet[shifted_position])
-#         else:
-#             cipher_text.append(letter)
-#     print(f"The {'encoded' if direction == 'encode' else 'decoded'} text is {''.join(cipher_text)}")
+def caesar(plain_text, shift_amount, direction):
+    cipher_text = []
+    shift_amount %= 26
+    for letter in plain_text:
+        if letter in alphabet:
+            if direction == "encode":
+                shifted_position = (alphabet.index(letter) + shift_amount) % 26
+                cipher_text.append(alphabet[shifted_position])
+            elif direction == "decode":
+                shifted_position = (alphabet.index(letter) - shift_amount) % 26
+                cipher_text.append(alphabet[shifted_position])
+        else:
+            cipher_text.append(letter)
+    print(f"The {'encoded' if direction == 'encode' else 'decoded'} text is {''.join(cipher_text)}")
 
 
-# def start(): 
-#     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-#     text = input("Type your message:\n").lower()
-#     shift = int(input("Type the shift number:\n"))
-#     caesar(plain_text = text, shift_amount = shift, direction = direction)
-#     play_again = input("Do you want to play again? Type 'yes' or 'no'. \n")
-#     if play_again.lower() == 'yes':
-#         start()
-#     else:
-#         print("Goodbye!")
-# start()
+def start(): 
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    caesar(plain_text = text, shift_amount = shift, direction = direction)
+    play_again = input("Do you want to play again? Type 'yes' or 'no'. \n")
+    if play_again.lower() == 'yes':
+        start()
+    else:
+        print("Goodbye!")
+start()
 
