@@ -1,0 +1,63 @@
+# ============================================
+# Date: August 10, 2026
+# Day: 10
+# Topic: Calculator Project - Functions, While Loop & Recursion
+# Source: Angela Yu - 100 Days of Code (Day 10)
+# ============================================
+
+# What I Learned from this challenge:
+# - Created separate functions for addition, subtraction, multiplication, and division
+# - Stored functions inside a dictionary and used operation symbols as keys
+# - Created a calculator() function to contain the entire calculator program flow
+# - Used a while loop to allow continuous calculations with the previous answer
+# - Used the latest answer as the first number for the next calculation
+# - Used a boolean variable (should_continue) to control the while loop
+# - Used conditional logic to stop the current calculation when the user chooses "n"
+# - Used recursion by calling calculator() again to start a new calculation
+# - Imported and displayed a custom calculator logo
+
+# Add
+# from art import logo2
+
+def add(n1, n2):
+    return n1 + n2
+
+# Subtract
+def subtract(n1, n2):
+    return n1 - n2
+
+# Multiply
+def multiply(n1, n2):
+    return n1 * n2
+
+# Divide
+def divide(n1, n2):
+    return n1 / n2
+
+operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply, 
+    "/": divide
+}
+
+def calculator():   
+    # print(logo2)     
+    num1 = float(input("What's the first number?: "))
+    should_continue = True
+    while should_continue:
+        for symbol in operations:
+            print(symbol)
+        operation_symbol = input("Pick an operation from the line above: ")
+        num2 = float(input("What's the next number?: "))
+        calculation_function = operations[operation_symbol]
+        latest_answer = calculation_function(num1, num2)
+
+        print(f"{num1} {operation_symbol} {num2} = {latest_answer}") 
+
+        num1 = latest_answer
+        cont_ex = (input(f"Type 'y' to continue calculating with {num1}, or type 'n' to start a new calculation: "))
+        if cont_ex == "n".lower():
+            should_continue = False
+            calculator()
+calculator()

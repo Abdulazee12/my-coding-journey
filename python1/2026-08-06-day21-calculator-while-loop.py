@@ -1,15 +1,24 @@
 # ================================
 # Date: August 6, 2026
 # Day: Day 21
-# Topic: Calculator - while loop refactor
+# Topic: Calculator with while loop
 # Source: Angela Yu - 100 Days of Code (Day 10/11)
 # ================================
 
-# Key insight from this challenge:
-# - "y" needs no special code - while loop naturally continues
+# What I learned from this challenge:
+# - Stored functions as VALUES inside a dictionary:
+#   operations = {"+": add, "-": subtract ...}
+# - Called a function from a dictionary:
+#   calculation_function = operations[operation_symbol]
+#   latest_answer = calculation_function(num1, num2)
+# - Used should_continue = True with while loop
+#   instead of while True: + break
+# - "y" needs NO special code - loop naturally continues
 # - Only "n" needs handling: should_continue = False
 # - num1 = latest_answer carries result into next calculation
-# - Draw the flow BEFORE writing code to avoid bugs
+#   so the previous answer becomes the new first number
+# - Looped through dictionary keys to display operations:
+#   for symbol in operations: print(symbol)
 
 # Add
 def add(n1, n2):
