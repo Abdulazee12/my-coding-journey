@@ -27,13 +27,39 @@ import random
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 def deal_card():
-    hand = []
-    for i in range(0, 2):
+  hand = []
+  for i in range(0, 2):
         hand.append(random.choice(cards))
-    return hand
+  return hand
 
-user_cards = deal_card()
-computer_cards = deal_card()
+def calculate_score(hand):
+    if len(hand) == 2 and sum(hand) == 21:
+        return 0
 
-print(user_cards)
-print(computer_cards)
+    score = sum(hand)
+
+    if score > 21 and 11 in hand:
+        score -= 10
+    return score
+
+def blackjack():
+    user_cards = deal_card()
+    computer_cards = deal_card()
+    user_score = calculate_score(user_cards)
+    computer_score = calculate_score(computer_cards)
+    print(f"Your cards: {user_cards}, current score: {user_score}")
+    print(f"Computer's first card: {computer_cards[0]}")
+    while True:
+        another_card = input("Type 'y' to get another card, type 'n' to pass: \n").lower()
+        if another_card == 'y':
+            user_cards.append(random.choice(cards))
+            user_score = calculate_score(user_cards)
+            if user_score > 21:
+                break
+            else:
+                print(f"Your cards: {user_cards}, current score: {user_score}")
+        elif another_card == 'n':
+            break
+    
+
+blackjack()
