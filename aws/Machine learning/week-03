@@ -1,0 +1,124 @@
+# Developing Machine Learning Solutions
+
+**Status:** ✅ Completed  
+**Platform:** AWS Skill Builder  
+**Focus:** Machine Learning Solutions, Amazon SageMaker, Model Evaluation and MLOps
+
+## What I Learned
+
+I learned about **KPIs (Key Performance Indicators)** and how important they are in determining whether an ML solution is actually achieving its intended business objective. A model shouldn't only be judged by its technical performance; its performance should also be connected to the actual business goal.
+
+I was introduced to **Amazon SageMaker AI** and its role in building, training, tuning, deploying and managing machine learning solutions.
+
+Some of the SageMaker capabilities I learned about include:
+
+- Amazon SageMaker Data Wrangler
+- Amazon SageMaker Feature Store
+- Amazon SageMaker JumpStart
+- Amazon SageMaker Experiments
+- Amazon SageMaker Automatic Model Tuning
+
+I also learned that machine learning models can come from different sources and that I don't always have to build a model completely from scratch.
+
+## Machine Learning Algorithms
+
+I learned about SageMaker built-in algorithms and different types of machine learning, including:
+
+- Supervised learning
+  - Classification
+  - Regression
+- Unsupervised learning
+- Image processing
+- Text analysis
+
+## Model Evaluation
+
+I learned about the importance of splitting data into:
+
+- **Training set** – used to train the model.
+- **Validation set** – used during development to evaluate and improve the model and make decisions such as tuning.
+- **Test set** – used for the final evaluation of how well the model generalizes to unseen data.
+
+I also learned about **model fit**, including:
+
+- Overfitting
+- Underfitting
+- Bias
+- Variance
+
+A model that overfits performs well on its training data but poorly on unseen data, while an underfitting model fails to learn the patterns in the training data sufficiently.
+
+The ideal situation is low bias and low variance, although in practice there is usually a trade-off that must be managed while trying to achieve good generalization.
+
+## Classification Metrics
+
+I learned about several metrics used to evaluate classification models:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- AUC-ROC
+
+I learned that choosing a metric should depend on what the model is actually supposed to achieve.
+
+For example, in a healthcare problem where missing a patient who is at high risk of developing a complication could be serious, recall may be more important than simply achieving a high accuracy.
+
+## Regression Metrics
+
+For regression problems, I learned about:
+
+- Mean Squared Error (MSE)
+- R-squared (R²)
+
+These metrics help determine how well a model predicts numerical values.
+
+## Model Deployment
+
+I learned about different ways of making ML models available for real-world use, including:
+
+- Self-hosted APIs
+- Managed APIs such as Amazon SageMaker
+
+This helped me understand that building a model is not the end of an ML project. The model eventually needs to be deployed so that it can provide predictions in a real application.
+
+## MLOps
+
+One of the most important things I learned from this course was the fundamental concept of **MLOps**.
+
+MLOps extends beyond simply building and deploying an ML model. It provides a systematic and repeatable approach to developing, deploying, monitoring and improving machine learning systems.
+
+Instead of:
+
+Build → Deploy → Done
+
+MLOps is more like:
+
+Develop → Train → Evaluate → Deploy → Monitor → Improve/Retrain → Redeploy
+
+This showed me that machine learning in the real world requires continuous management and improvement.
+
+## My Key Takeaway
+
+The biggest lesson I took from this course is that building a good ML model is not simply about achieving a high score on a dataset.
+
+A successful ML solution should:
+
+1. Solve the intended business problem.
+2. Use appropriate data and features.
+3. Generalize well to unseen data.
+4. Be evaluated using metrics that reflect the actual objective.
+5. Be deployed appropriately.
+6. Be monitored and continuously improved.
+
+This course helped me move from understanding the **ML process** to understanding more about how ML solutions can actually be **developed, evaluated, deployed and maintained in production**.
+
+## Reflection
+
+My understanding of machine learning is gradually changing from simply knowing what ML is to understanding how an actual ML solution is built and operated.
+
+I am beginning to see the connection between:
+
+**Business Problem → Data → Features → Model → Evaluation → Deployment → MLOps**
+
+This is another step toward my goal of becoming an **AI/ML Engineer focused on HealthTech and real-world AI solutions.**
